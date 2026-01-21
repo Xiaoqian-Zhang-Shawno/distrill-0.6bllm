@@ -10,7 +10,7 @@ from typing import Optional
 class TeacherConfig:
     """教师模型配置（DeepSeek API）"""
     api_key: str = os.getenv(
-        "DEEPSEEK_API_KEY", "sk-eceb580e89904659922c04f13d1fa9b7")
+        "DEEPSEEK_API_KEY", "你的key")
     base_url: str = "https://api.deepseek.com/v1"
     model_name: str = "deepseek-chat"
     temperature: float = 0.7
@@ -78,4 +78,5 @@ class TrainingConfig:
     # 导出配置
     quant_mode: str = "int4"  # int4 / int8 / fp16
     onnx_export_path: str = "./export/model.onnx"
+
     mnn_export_path: str = "./export/model.mnn"
